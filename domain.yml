@@ -1,0 +1,212 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- faq:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hello! What questions do you have?
+  utter_out_of_scope:
+  - text: Sorry, can you rephrase your question?
+  utter_goodbye:
+  - text: Bye, thanks for visiting NCAIR
+  utter_default:
+  - text: Interesting! Kindly, refer your enquiries to ncair@nitda.gov.ng.
+  utter_iamabot:
+  - text: I am a bot, powered by NCAIR.
+  utter_faq/ask_contact:
+  - text: ncair@nitda.gov.ng
+  utter_faq/ask_ncair:
+  - text: NCAIR - National Centre for Artificial Intelligence and Robotics is one of the National Information Technology Development Agency(NITDA)'s special purpose vehicles created to promote research and development on emerging technologies and their practical application in areas of Nigerian national interest.
+  utter_faq/ask_achievement:
+  - text: 'Yes, the center has developed many projects such as: I. Industrial Robots & Drones for precision farming II. Educational Robots & Drones for training and research purposes. for up-to-date list of our past projects, kindly visit www.ncair.nitda.gov.ng/projects.'
+  utter_faq/ask_relationship_nitda:
+  - text: NCAIR is a subsidiary of the National Information Technology Development Agency (NITDA), which will serve as a leading hub of innovation, research and development, knowledge transfer, and training in the areas of emerging technologies.
+  utter_faq/ask_robotics:
+  - text: Yes, Robots will help reduce human efforts, improve production, and advance digital ecosystem.
+  utter_faq/ask_purpose:
+  - text: To foster the development and implementation of AI, Robotics and other Emerging Technologies (ET) in Nigeria.
+  utter_faq/ask_opentoeveryone:
+  - text: NCAIR is open to all individual who are interested in ICT, Artificial Intelligence and Robotics, research & development in areas of emerging technologies through partnership and collaboration.
+  utter_faq/ask_applyjob:
+  - text: NCAIR do open for jobs opportunities on the need basis. Kindly follow us on our social media platform on Koo, Facebook, LinkedIn via @NCAIRNigeria for such job opportunities. For any available job vacancies, kindly visit NITDA’s website via www.nitda.gov.ng
+  utter_faq/ask_internship:
+  - text: 'Yes, you can apply for internship at NCAIR. Get a reference letter from your institution and submit to NITDA’s office. Area 11, 28 Port Harcourt Crescent, Off Gimbiya St, Garki, Abuja. For more information on similar opportunities kindly follow us on our social media platforms on Koo, Facebook, LinkedIn via @NCAIRNigeria or visit our website: www.nitda.gov.ng'
+  utter_faq/ask_posttoncair:
+  - text: Yes, However NYSC office is responsible for posting coppers to any government establishments.
+  utter_faq/ask_nanointern:
+  - text: For requirements on nano internship kindly visit our office at Plot No. 790, Cadastral zone B03, Wuye district, Abuja FCT.
+  utter_faq/ask_facility:
+  - text: NCAIR is a research center open to student or individual whose interest or training is in line with NCAIR mandate. You are therefore advised to formerly write an application, submit to the center, and await approval.
+  utter_faq/ask_recruiting:
+  - text: NCAIR do open for jobs opportunities on the need basis.Kindly follow us on our social media platform on Koo, Facebook, LinkedIn via @NCAIRNigeria for such job opportunities. For any available job vacancies, kindly visit NITDA’s website via www.nitda.gov.ng.
+  utter_faq/ask_happens:
+  - text: In NCAIR we engage in Research and development, capacity building, Start-up clinic/incubation, development of AI applications, Robotics, drones, support digital innovation, partnering and collaboration with other private and public institutions.
+  utter_faq/ask_work:
+  - text: NCAIR do open for jobs opportunities on the need basis. Kindly follow us on our social media platform on Koo, Facebook, LinkedIn via @NCAIRNigeria for such job opportunities. For any available job vacancies, kindly visit NITDA’s website via www.nitda.gov.ng
+  utter_faq/ask_sponsorship:
+  - text: Yes, Through our interns programs
+  utter_faq/ask_sell:
+  - text: No, but we can partner in developing the idea and link up with prospective buyer.
+  utter_faq/ask_data:
+  - text: Yes, NCAIR source its data through different methods including primary and secondary sources.
+  utter_faq/ask_assist:
+  - text: NCAIR Assist start-ups in Nigeria through our programs such as Future hack, Startup Clinic, Acceleration programs and iQuest. For more info on this kindly visit our website on www.ncair.nitda.gov.ng.
+  utter_faq/ask_elearning:
+  - text: Yes, to access our e-learning resources kindly visit www.academy.nitda.gov.ng
+  utter_faq/ask_ngo:
+  - text: It is not. NCAIR is established as a subsidiary of the National Information Technology Development Agency (NITDA).
+  utter_faq/ask_accept_interns:
+  - text: ' Yes, you can apply for internship at NCAIR. Get a reference letter from your institution and submit to NITDA’s office. Area 11, 28 Port Harcourt Crescent, Off Gimbiya St, Garki, Abuja. For more information on similar opportunities kindly follow us on our social media platforms on Koo, Facebook, LinkedIn via @NCAIRNigeria or visit our website: www.nitda.gov.ng '
+  utter_faq/ask_website:
+  - text: www.ncair.nitda.gov.ng
+  utter_faq/ask_location:
+  - text: NCAIR is located at Plot 790, Cadastral zone B03, Wuye District Abuja, Nigeria.
+  utter_faq/ask_mission_vision:
+  - text: "Vision: To foster development of Nigeria's digital ecosystem through research and innovation in emerging technologies. Mission: To accelerate research and development of innovative digital technologies in Nigeria, enable collaboration and build an enabling environment for innovation and entrepreneurship in emerging digital technologies."
+  utter_faq/ask_collaboration_requirement:
+  - text: ' The Agency’s decision to honor an application for external collaboration shall be subject to the following criteria: i. The applicant must be a duly registered body recognized by Law. ii. The applicant must possess and demonstrate the requisite capacity and experience needed to organize such programs, events, or projects. iii. The proposed program or event must not be past events i.e. at the time of considering the application, the date of the proposed event must be in the future. iv. The proposed impact of the project must be clearly ascertained and seen to be beneficial to the ordinary citizens of Nigeria at large and not just a selected few; and v. The project, program or event must be aimed at assisting the Agency to achieve any or all the Agency’s core mandates, particularly those prioritized by the Agency in the year under consideration. vi. All applications for collaboration, sponsorship and support are subject to the availability of funds. Thus, irrespective of meeting the above identified criteria, the Agency is at liberty to refuse sponsorship or support, where the Agency is of the opinion that it lacks the needed financial capacity to adequately support the request.'
+  utter_faq/ask_core_values:
+  - text: 'Innovation: We strive to create unique solutions, push technological boundaries, and consistently establish new frontiers in digital technologies \n Cooperation and Collaboration: We build valuable public-private sector networks across multiple industries; and we provide a platform to link ideas and opportunities.\n Cutting-edge Research: Our research challenges existing processes to produce quality contributions to knowledge. \n Sustainability: We strive to minimize negative impact on the environment and to ensure that sustainability is at the heart of our operations, strategy, and long-term vision. People and society: Our approach is people centric. We treat people with respect; we provide an environment for personal development; we build meaningful individual and organizational relationships, and we work for national interest.'
+  utter_faq/ask_plan:
+  - text: The NCAIR’s plan for the next few years is to create an ethical workspace to foster research that drives digital innovation in emerging technologies.
+  utter_faq/ask_collaborative:
+  - text: NCAIR encourage collaborations, kindly check our collaborations and partnership guidelines/requirements for more information.
+  utter_faq/ask_goal:
+  - text: NCAIR’s overall goal is to achieve its set objectives for the year, in its various initiatives.
+  utter_faq/ask_join_ncair:
+  - text: Submit your application to NITDA.
+  utter_faq/ask_focus:
+  - text: |-
+      i. Robotics and Drones 
+       ii. Artificial Intelligence 
+       iii. Virtual Reality and Augmented reality iv. Blockchain 
+       v. Internet of Things (IoT) vi. Collaboration vii. Start-up development
+  utter_faq/ask_open_close_time:
+  - text: NCAIR opens from 8:30am to 4:30pm (Monday - Friday).
+  utter_faq/ask_students_program:
+  - text: We are happy to learn that you are interested in our students’ programs, kindly follow us on our social media platforms for possible advert on program initiatives dedicated for students on Koo, Facebook, LinkedIn via @NCAIRNigeria
+  utter_faq/ask_private_colaboration:
+  - text: Yes, NCAIR encourage collaborations, kindly check our collaborations and partnership guidelines/requirements for more information.
+  utter_faq/ask_access_ncair_learning:
+  - text: We are encouraged to learn of your plan for further skills development, Kindly visit academy.nitda.gov.ng for our educational materials and other resource documents.
+  utter_faq/ask_eligibility:
+  - text: NCAIR is open to all individual who are interested in ICT, Artificial Intelligence and Robotics, research & development in areas of emerging technologies through partnership and collaboration.
+  utter_faq/ask_establish:
+  - text: It was commissioned on 13th November 2020 by Hon. Minister of Communication and Digital Economy, Prof. Isa Ali Ibrahim Pantami.
+  utter_faq/ask_help:
+  - text: NCAIR’s contact details are available on the portal.
+  utter_faq/ask_engagement:
+  - text: Through its various initiatives such as Workshops, Conferences and so on as well as collaboration with organizations/institutions
+  utter_faq/ask_mentors:
+  - text: We have staff that can provide basic mentorship or guidance in areas of Research & Development in emerging technology and ICT innovation driven enterprises.
+  utter_faq/ask_acceptstartups:
+  - text: Yes, NCAIR accepts startups that leverage on technology to provide solutions.
+  utter_faq/ask_startups_requirement:
+  - text: Startups interested in working with NCAIR must first be registered on https://innovationportal.nitda.gov.ng/ and then register for iQuest program for screening.
+  utter_faq/ask_training_period:
+  - text: Depending on the training, it ranges from 2 days to two weeks long.
+  utter_faq/ask_growth:
+  - text: By creating a thriving ecosystem for innovation-driven enterprises and job creation.
+  utter_faq/ask_resources:
+  - text: The center has both human resources and advanced computing machinery.
+  utter_faq/ask_impact:
+  - text: Artificial Intelligence will help reduce human efforts, improve production, and advance digital ecosystem.
+  utter_faq/ask_training_offer:
+  - text: Training is tailored towards the set objectives during collaboration signup. This may include Entrepreneurship development, Specialized Training on Emerging technology (AI, IoT, Robotics, etc...)
+  utter_faq/ask_operational:
+  - text: YES! the artificial intelligence sector is operational.
+  utter_faq/ask_attendance_support:
+  - text: At the moment, we do not support external conferences, kindly write to the center for further consideration.
+  utter_faq/ask_events:
+  - text: Announcement will be made on our social media platforms on Koo, Facebook, and Instagram via @ncairnigeria
+  utter_faq/ask_support_company_idea:
+  - text: Yes! NCAIR can help develop an idea. However, you need to sign up for our iQuest program for Screening.
+  utter_faq/ask_funding:
+  - text: NCAIR provide opportunities for startups to gain exposure and possibly funding from investors through our programs.
+  utter_faq/ask_events_requirements:
+  - text: Requirements are always included in our adverts, kindly follow our social media platforms (Koo, Facebook, and Instagram via @ncairnigeria.) for upcoming program announcement.
+  utter_faq/ask_certification:
+  - text: Yes, at NCAIR we offer numerous training programs. Upon completion, a certificate is issued to successful participants.
+  utter_faq/ask_training_fee:
+  - text: All NCAIR trainings or capacity building programs and requirements are provided on our website.
+  utter_faq/ask_submit_idea:
+  - text: Startups interested in working with NCAIR must first be registered on https://innovationportal.nitda.gov.ng/ and then register for iQuest program for screening.
+  utter_faq/ask_submit_project:
+  - text: If you have a project you want to submit, kindly send it to info@nitda.gov.ng or address it to the Director General of NITDA and copy the National Director, NCAIR, then submit your project portfolio to plot 790, cadastral zone B03, Wuye district, Abuja FCT, Nigeria.
+  utter_faq/ask_learn:
+  - text: By engaging them in one of our focus project initiatives in the center.
+  utter_faq/ask_dg:
+  - text: The Director of NCAIR is Eng. Garba Ya'u.
+  utter_faq/ask_machines:
+  - text: NCAIR has latest computing machines this includes, Printed Circuit Board (PCB) production equipment, CNC machines, 3D printers, Servers, GPUs etc.
+  utter_faq/ask_projects:
+  - text: |2
+
+
+      "The center is currently working on the following projects
+        i. Electronics Body Vitals Sign Monitoring System (E-vitals)
+        ii. Mobile Robots for Logistics 
+        iii. Industrial Robot Arm 
+        iv. Smart Home System 
+        v. Drones for Agricultural & Surveillance applications 
+        vi. AI based Chatbot & Humanoid 
+        vii. Special Training Programs on (STEM, AI, Robotics, Drone, Digital Communication, Entrepreneurship, IoT, VR)"
+  utter_faq/ask_school:
+  - text: School can participate by applying through the NCAIR portal
+  utter_faq/ask_organize_training:
+  - text: Yes, through its various initiatives such as Workshops, Conferences and so on as well as collaboration with organizations/institutions.
+  utter_faq/ask_capacity_building:
+  - text: The statistics of individuals trained by the center is available on our websites. kindly visit www.ncair.nitda.gov.ng.
+  utter_faq/ask_project_examples:
+  - text: 'Yes, the center has developed many projects such as: I. Industrial Robots & Drones for precision farming II. Educational Robots & Drones for training and research purposes. for up-to-date list of our past projects, kindly visit www.ncair.nitda.gov.ng/projects.'
+  utter_faq/ask_advance_training:
+  - text: |-
+      Not at the moment, however the center offers mentorship through its various initiatives such as Startup Clinic.
+       kindly follow us on our social media platforms for possible advert on our initiatives (Koo, Facebook, LinkedIn, Instagram via @NCAIRNigeria).
+  utter_faq/ask_commercialize:
+  - text: No, we work with our start-up to commercialize any of our ideas.
+  utter_faq/ask_team:
+  - text: Not at the moment, requirements are always included in our adverts, kindly follow our social media platforms (Koo, Facebook, and Instagram via @ncairnigeria.) for upcoming program announcement.
+  utter_faq/ask_research:
+  - text: Our current research areas are on Emerging Technologies.
+  utter_faq/ask_requirement_candidate:
+  - text: No qualification is required to work on a project in the center, however your project need to be leveraging on ICT.
+  utter_faq/ask_programs_initiatives:
+  - text: |-
+      i. Innovation Challenge/Hackathons 
+       ii. STEM Bootcamp for Kids (SB4Kids) 
+       iii. Intern Knowledge Sharing and Ideation Session (iKSIS) iv. Blockchain 
+       v. Virtual and Nano Internships vi. And others
+actions:
+- utter_greet
+- utter_goodbye
+- utter_iamabot
+- utter_out_of_scope
+- utter_default
+- utter_faq
+- action_default_fallback
+forms: {}
+e2e_actions: []
